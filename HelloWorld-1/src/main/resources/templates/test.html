@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Fleet Management- Spring Boot Web Application</title>
+</head>
+<body>
+<h1 align="center">Fleet List</h1>
+   <br/>
+   <table border="1" cellpadding="10">
+   <tr>
+      <th>Fleet_Name</th>
+      <th>Fleet_Model</th>
+      <th>Fleet_Make</th>
+   </tr>
+   
+     <tr th:each="fleet : ${fleetList}">
+        <td th:text="${fleet.fleetName}">Fleet_Name</td>
+        <td th:text="${fleet.fleetModel}">Fleet_Model</td>
+        <td th:text="${fleet.fleetMake}">Fleet_Make</td>
+        </table>
+   
+</body>
+</html>
